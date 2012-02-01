@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "moat.py", line 65, in <module>
+    tornado.ioloop.IOLoop.instance().start()
+  File "/Library/Python/2.7/site-packages/tornado/ioloop.py", line 282, in start
+    event_pairs = self._impl.poll(poll_timeout)
+  File "/Library/Python/2.7/site-packages/tornado/ioloop.py", line 559, in poll
+    kevents = self._kqueue.control(None, 1000, timeout)
+KeyboardInterrupt
+WARNING:root:404 GET /js/libs/mobile-scroll.js (::1) 0.61ms
+WARNING:root:404 GET /favicon.ico (::1) 0.63ms
+WARNING:root:404 GET /js/libs/mobile-scroll.js (::1) 0.62ms
+WARNING:root:404 GET /favicon.ico (::1) 0.48ms
+WARNING:root:404 GET /js/libs/mobile-scroll.js (::1) 0.77ms
+WARNING:root:404 GET /favicon.ico (::1) 0.59ms
+WARNING:root:404 GET /js/libs/mobile-scroll.js (::1) 0.52ms
+WARNING:root:404 GET /favicon.ico (::1) 0.59ms
