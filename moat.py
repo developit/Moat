@@ -3,6 +3,7 @@ import tornado.web
 
 import hashlib
 import json
+import os
 
 launchers = {}
 
@@ -46,15 +47,18 @@ class LauncherRemove(tornado.web.RequestHandler):
 		id = self.get_argument('id')
 		del launchers[id]
 
+settings = {
+	"static_path": os.path.join(os.path.dirname(__file__), "frontend")
+}
+
 application = tornado.web.Application([
-    (r"/", MainHandler),
     (r"/launchers/add", LauncherAdd),
     (r"/launchers/list", LauncherList),
     (r"/launchers/remove", LauncherRemove),
     (r"/launchers/run", LauncherRun),
-    #(r"/apps/add", AppAdd),
-    #(r"/apps/remove", AppRemove),
-])
+    
+    (r"/(.*)", tornado.web.StaticFileHandler, dict(path=settings["static_path"],default_filename="index.html")),
+], **settings)
 
 if __name__ == "__main__":
     application.listen(8888)
