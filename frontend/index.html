@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Remoat</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		
+		<script type="text/javascript" src="js/libs/puredom.js"></script>
+		<script type="text/javascript" src="js/libs/mobile-scroll.js"></script>
+		<script type="text/javascript" src="js/libs/html5-contextmenu.js"></script>
+		
+		<script type="text/javascript" src="js/app/app.js"></script>
+		<script type="text/javascript" src="js/app/controllers/home.js"></script>
+		<script type="text/javascript" src="js/app/controllers/launcher/edit.js"></script>
+		<script type="text/javascript" src="js/app/controllers/launcher/web.js"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<div id="viewBase">
+			</div>
+		</div>
+		
+		
+		
+		<script type="text/view-template" data-view-name="home"><![CDATA[
+			<div class="views-home view">
+				<div class="toolbar">
+					<h3>{global.appName}</h3>
+				</div>
+				<div class="mainContent">
+					<h4>Launchers:</h4>
+					<div id="launcherList">
+						
+					</div>
+				</div>
+			</div>
+		]]></script>
+		
+		<script type="text/view-template" data-view-name="launcher"><![CDATA[
+			<div class="launcher views-launcher view">
+				<h4 data-tpl-id="name"></h4>
+				<img data-tpl-id="icon" />
+			</div>
+		]]></script>
+		
+		<script type="text/view-template" data-view-name="launcher.edit"><![CDATA[
+			<div class="views-launcher-edit view">
+				<h4 data-tpl-id=""></h4>
+			</div>
+		]]></script>
+		
+		<script type="text/view-template" data-view-name="launcher.web"><![CDATA[
+			<div class="views-launcher-web view">
+				<div class="toolbar">
+					<h3><span data-tpl-id="name"></span> Web</h3>
+				</div>
+				<div class="mainContent">
+					<iframe data-tpl-id="url"></iframe>
+				</div>
+			</div>
+		]]></script>
+
+	</body>
+</html>
