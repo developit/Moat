@@ -1,5 +1,5 @@
 
-         ,;=+-
+```         ,;=+-
         //
        /^^\
   ,~~'` ●{}`;,                 `'~:;,
@@ -10,7 +10,7 @@
           | |  | |         \  /, \
          / /  / /           \ \ \ \
         / /  / /            / / / /
-~~~~~~~~""~~~""~~~~~~~~~~~~~""~~""~~~~
+~~~~~~~~""~~~""~~~~~~~~~~~~~""~~""~~~~```
 
 ====
 
@@ -23,4 +23,4 @@ It lets you start and stop applications, configure custom application launchers,
 
 ====
 
-Moat is being developed by @ncoutsos and @developit.
+Moat is being developed by [nickcoutsos](http://github.com/nickcoutsos) and [developit](http://github.com/developit).
