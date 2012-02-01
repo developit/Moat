@@ -1,4 +1,6 @@
 
+# Moat
+
 ```         ,;=+-
         //
        /^^\
@@ -12,10 +14,6 @@
         / /  / /            / / / /
 ~~~~~~~~""~~~""~~~~~~~~~~~~~""~~""~~~~```
 
-====
-
-Moat
-====
 
 Moat is a kick ass way to manage a computer you use connected to a TV, all from your web browser. 
 
