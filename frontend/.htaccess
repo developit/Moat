@@ -1,0 +1,5 @@
+
+RewriteEngine on
+
+RewriteCond $1 !^(_apps\/|css\/|js\/|index\.html)
+RewriteRule ^(.*)$ index.html

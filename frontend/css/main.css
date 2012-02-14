@@ -148,12 +148,12 @@ html, body {
 	overflow: hidden;
 }
 
-div, span, p, ul, ol, li, form, fieldset, label, dd, dt {
+div, span, p, ul, ol, li, form, fieldset, label, dd, dt, iframe {
 	position: relative;
 	margin: 0;
 	padding: 0;
 	border: none;
-	overflow: visible;
+	overflow: hidden;
 	cursor: default;
 }
 
@@ -179,11 +179,17 @@ a {
 
 #app,
 #viewBase,
-.view {
+.view,
+#launcherList {
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.mainContent {
 	height: 100%;
 	overflow: hidden;
 }
@@ -198,7 +204,7 @@ a {
 }
 
 .toolbar {
-	height: 79px;
+	height: 49px;
 	background: #111;
 	border-bottom: 1px solid #666;
 }
@@ -208,9 +214,74 @@ a {
 	position: relative;
 	width: 100%;
 	top: 50%;
-	margin: -1.21em 0 0;
+	margin: -0.6em 0 0;
 	font-size: 200%;
 	text-align: center;
 	font-weight: bold;
 }
+
+
+
+
+
+
+.launcher {
+	width: 140px;
+	height: 153px;
+	float: left;
+	clear: none;
+	margin: 5px;
+	padding: 10px 10px 0;
+}
+
+.launcher img {
+	display: block;
+	height: 128px;
+	margin: 0 auto 10px;
+	background: #BBB;
+	border-radius: 7px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.launcher h4 {
+	position: absolute;
+	display: block;
+	left: 10px;
+	top: 143px;
+	width: 140px;
+	text-align: center;
+	font-size: 110%;
+	font-weight: bold;
+	color: #FFF;
+	text-shadow: 1px 0 2px #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.views-launcher-web iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: none;
+	border-collapse: collapse;
+}
+
+
+
+
 

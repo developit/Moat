@@ -1,20 +1,35 @@
 app.controller.register('launcher.edit', {
 	
-	isDefault : true,
-	title : 'Home',
-	urlTemplate : '/launcher/edit/{id}',
+	title : 'Edit {launcher.name}{global.appTitle}',
+	customUrl : '/launcher/edit/{name}',
 	
-	load : function(params) {
-		console.log('controller.launcher.edit', arguments);
+	load : function(options) {
+		console.log('controller.'+this.name, arguments);
+		var self = this,
+			tpl = {
+				global : app.tpl.global
+			};
 		
-		this.ui = app.view.template(this.name, puredom.extend({
-			title : this.title
-		}, app.global), params.viewBase);
-		this.ui.show();
+		this.params = options.params || {};
+		this.launcher = app.model.launchers.get(options.params.name);
+		tpl.launcher = this.launcher;
+		document.title = tpl.title = puredom.template(this.title, tpl);
+		
+		this.ui = app.view.template(this.name, tpl, options.viewBase).show();
+		
+		this.handlers = {
+		};
+		
+		tpl = options = null;
+		this._kill = function(){ self=null; };
 	},
 	
 	unload : function() {
+		if (this._kill) {
+			this._kill();
+		}
 		this.ui.destroy();
+		this.ui = this._kill = null;
 	}
 	
 });
